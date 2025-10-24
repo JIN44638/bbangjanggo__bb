@@ -85,8 +85,12 @@
           <RouterLink to="/login">로그인</RouterLink>
           <RouterLink to="/signup">회원가입</RouterLink>
         </div>
-        <div v-if="loggedInUser" class="loginIcon" :key="'logout-' + loggedInUser?.name" @click="closeMenu"><RouterLink to="/mypage" >마이페이지</RouterLink></div>
-        <div v-else to="/login" key="login" @click.prevent="goMyPage"><RouterLink to="/login" >마이페이지</RouterLink></div>
+        <div v-if="loggedInUser" class="loginIcon" :key="'logout-' + loggedInUser?.name" @click="closeMenu">
+          <RouterLink to="/mypage">마이페이지</RouterLink>
+        </div>
+        <div v-else to="/login" key="login" @click.prevent="goMyPage">
+          <RouterLink to="/login">마이페이지</RouterLink>
+        </div>
       </div>
     </div>
   </header>
@@ -108,6 +112,10 @@ onMounted(() => {
 
   // 다른 탭이나 페이지에서 로그인 상태가 바뀌면 감지
   window.addEventListener("storage", checkedLogin);
+  // ✅ 페이지 이동 후 항상 메뉴 닫기
+  router.afterEach(() => {
+    closeMenu();
+  });
 });
 
 onUnmounted(() => {
