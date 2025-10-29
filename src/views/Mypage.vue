@@ -66,17 +66,21 @@
 @use "/src/assets/variables" as *;
 
 .mypage {
-  height: calc(100vh - 290px);
+  // height: calc(100vh - 290px);
   height: calc(100vh - 89.77px - 115px);
+  @media (max-width: 650px) {
+    height: auto;
+  }
   background-color: $bg-color;
   // padding-bottom: 50px;
   position: relative;
-  .mypage_wrap {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+
+  // .mypage_wrap {
+  //   position: absolute;
+  //   top: 50%;
+  //   left: 50%;
+  //   transform: translate(-50%, -50%);
+  // }
 }
 h1 {
   text-align: center;
@@ -203,7 +207,8 @@ button.reser_change {
 @media screen and (max-width: 768px) {
   .mypage {
     background-color: $bg-color;
-    height: 102vh;
+    height: auto;
+    padding: 8% 0;
   }
 
   .box_bo {
@@ -225,10 +230,6 @@ button.reser_change {
   }
 }
 @media screen and (max-width: 390px) {
-  .mypage {
-    // padding-bottom: 30px;
-    height: 95vh;
-  }
   .mypage-box {
     gap: 25px;
   }
