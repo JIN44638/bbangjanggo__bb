@@ -5,7 +5,7 @@
       <h2>로그인</h2>
       <div class="login-input">
         <input v-model="usermail" type="email" placeholder="아이디 입력" />
-        <input v-model="password" type="text" placeholder="비밀번호 입력" minlength="8" maxlength="12" />
+        <input v-model="password" type="password" placeholder="비밀번호 입력" minlength="8" maxlength="12" />
       </div>
       <div class="login-box">
         <div class="logBtn">
@@ -81,7 +81,7 @@ const login = () => {
     width: 100%;
     max-width: 1000px;
     margin: auto;
-    padding: 50px 0;
+    padding: 51px 0;
     h2 {
       font-family: "Cafe24Surround";
       color: $point-color;
@@ -115,7 +115,7 @@ const login = () => {
         width: 100%;
         max-width: 400px;
         background-color: #ccc;
-        margin: 20px 0 10px 0;
+        margin: 3.5px 0;
       }
       .sns-login {
         display: flex;
@@ -136,7 +136,7 @@ const login = () => {
           justify-content: space-between;
           img {
             display: block;
-            width: 100%;
+            width: 120px;
             padding: 0 30%;
           }
         }
@@ -146,7 +146,7 @@ const login = () => {
         gap: 25px;
         align-items: center;
         justify-content: center;
-        width: 100%;
+        width: 100px;
         white-space: nowrap;
         .loginHelp-top {
           display: flex;
@@ -172,6 +172,7 @@ const login = () => {
         text-align: center;
         padding: 20px 30px;
         margin: 20px 0 0 0;
+        font-size: 14px;
         &:nth-child(2) {
           background-color: $main-color;
           color: $font-color;
