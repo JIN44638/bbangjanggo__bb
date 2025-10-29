@@ -50,6 +50,13 @@ import { RouterLink } from "vue-router";
       color: white;
       font-size: 48px;
       z-index: 1;
+          padding-top: 40%;
+      @media (max-width:768px){
+        padding-top: 60%;
+      }
+      @media (max-width:390px){
+        padding-top: 90%;
+      }
     }
     .reserBtn {
       width: 100%;
