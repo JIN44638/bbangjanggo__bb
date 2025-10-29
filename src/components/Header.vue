@@ -298,7 +298,7 @@ header {
 
   // isDark dark가 더해지면
   &.dark {
-    background-color: $font-color;
+    background-color: rgba(80, 49, 29, 1);
 
     a {
       color: #fff;

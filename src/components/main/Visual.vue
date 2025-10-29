@@ -76,7 +76,7 @@ import { RouterLink } from "vue-router";
         &:hover {
           // transform: translateY(-2px);
           box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-          // background-color: darken($color: $point-color, $amount: 10);
+          
           background-color: rgb(133, 99, 63);
           // .btn-content {
           //   .btn-image {
