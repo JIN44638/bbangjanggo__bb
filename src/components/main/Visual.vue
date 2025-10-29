@@ -34,38 +34,28 @@ import { RouterLink } from "vue-router";
 
   .visual-txt {
     width: 80%;
-    height: 100%;
     max-width: 1000px;
-    min-width: 150px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-end;
-    margin: auto;
-    @media (max-width:830px){
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    @media (max-width: 400px) {
       max-width: 500px;
+      top: 25%;
     }
     h1 {
       font-family: "Cafe24Surround";
       color: white;
       font-size: 48px;
       z-index: 1;
-          padding-top: 40%;
-      @media (max-width:768px){
-        padding-top: 60%;
-      }
-      @media (max-width:390px){
-        padding-top: 90%;
-      }
     }
     .reserBtn {
       width: 100%;
       display: flex;
       gap: 20px;
-      margin-top: 180px;
-      margin-bottom: 18%;
-      @media (max-width:830px){
-        margin-top: 100px;
+      padding-top: 15%;
+      @media (max-width: 830px) {
+        padding-top: 50px;
       }
 
       .btn {
@@ -74,7 +64,7 @@ import { RouterLink } from "vue-router";
         height: 180px;
         border-radius: 20px;
         background-color: transparent;
-        border: 5px dashed $sub-color  ;
+        border: 5px dashed $sub-color;
         text-decoration: none;
         display: flex;
         align-items: center;
@@ -83,7 +73,7 @@ import { RouterLink } from "vue-router";
         &:hover {
           // transform: translateY(-2px);
           box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-          
+
           background-color: rgb(133, 99, 63);
           // .btn-content {
           //   .btn-image {
@@ -176,15 +166,15 @@ import { RouterLink } from "vue-router";
   // }
 }
 
-    @keyframes rotateAnimation {
-      0% {
-        transform: rotate(0deg); /* 시작 */
-      }
-      50% {
-        transform: rotate(10deg); /* 10도 회전 */
-      }
-      100% {
-        transform: rotate(-10deg); /* -10도 회전 */
-      }
-    }
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate(0deg); /* 시작 */
+  }
+  50% {
+    transform: rotate(10deg); /* 10도 회전 */
+  }
+  100% {
+    transform: rotate(-10deg); /* -10도 회전 */
+  }
+}
 </style>
