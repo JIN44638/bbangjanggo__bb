@@ -181,7 +181,6 @@ const signup = () => {
     }
 
     .signupInfo {
-      margin-bottom: 25px;
       .infoBox {
         p {
           font-size: $desc-text-font;
